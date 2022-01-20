@@ -11,7 +11,7 @@ public class Fields
     public int field1;
     public String field2;
     public float field3;
-    public boolean light = false;
+    public boolean light;
 
     /**
      * Constructor for objects of class Fields
@@ -22,6 +22,7 @@ public class Fields
         field1 = 0;
         field2 = "i am a string";
         field3 = 0.1f;
+        light = false;
     }
 
     /**
@@ -48,6 +49,7 @@ public class Fields
         String lightStatus = "";
         if (turnedOn) {
             lightStatus = "Light is turned on!";
+            System.out.println(lightStatus);
         }
         else {
             lightStatus = "Light is off.";
@@ -69,5 +71,6 @@ public class Fields
         else {
             light = flickTo;
         }
+        
     }
 }
