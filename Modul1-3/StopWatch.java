@@ -10,6 +10,7 @@ public class StopWatch
 
     public int minute;
     public int second;
+    public String timeString;
     public NumberViewer minuteTracker;
     public NumberViewer secondTracker;
     /**
@@ -19,7 +20,8 @@ public class StopWatch
     {
         // initialise instance variables
         minute = 0;
-        second = 0;
+        second = 58;
+        timeString = "";
         minuteTracker = new NumberViewer(60, minute);
         secondTracker = new NumberViewer(60, second);
         
@@ -34,30 +36,18 @@ public class StopWatch
      * while displaying the time underway.
      */
     public void RunStopWatch(){
-        while (minute < 1) {
-            try {
-                Thread.sleep(1000);
+        secondTracker.Increment();
+        // increments to next minute, else increments second alone
+        if (secondTracker.getTime() == 0) {
+            minuteTracker.Increment();
 
-                // increments to next minute, else increments second alone
-                if (secondTracker.getTime() == 59) {
-                    secondTracker.Increment();
-                    minuteTracker.Increment();
+            second = secondTracker.getTime();
+            minute = minuteTracker.getTime();
 
-                    second = secondTracker.getTime();
-                    minute = minuteTracker.getTime();
-                    DisplayTime();
-
-                } else {
-                    secondTracker.Increment();
-                }
-
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-            
-
-            
         }
+
+        DisplayTime();
+
     }
 
     /**
@@ -68,7 +58,7 @@ public class StopWatch
      * @return the current minute and second in string format
      */
     public String DisplayTime(){
-        String timeString = "" + minute + ":" + second;
+        timeString = minuteTracker.getTime() + ":" + secondTracker.getTime();
         return timeString;
     }
 
