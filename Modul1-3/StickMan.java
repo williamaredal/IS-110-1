@@ -77,6 +77,12 @@ public class StickMan
         return stickman;
     }
 
+    /**
+     * A method for putting the stickman onto a bed
+     *
+     * @uses stickman  a sample parameter for a method
+     * @prints the current stringman onto a bed
+     */
     public void PutStickmanToBed(){
         System.out.println(stickman);
         System.out.println(bed);
