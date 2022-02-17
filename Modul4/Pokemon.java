@@ -29,7 +29,7 @@ public class Pokemon
      * @param  type the type of info you want shown
      * @return    the information field you requested
      */
-    public String sampleMethod(String type)
+    public String getPokemonInfo(String type)
     {
         info = "";
         

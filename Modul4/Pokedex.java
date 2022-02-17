@@ -29,4 +29,12 @@ public class Pokedex
         this.myPokedex.add(new Pokemon(name, pokemonType, lvl));
         System.out.println("The pokemon was added to your pokedex");
     }
+
+    public void showPokemons(){
+        for (Pokemon pokemon : myPokedex) {
+            System.out.println(pokemon.getPokemonInfo("name"));
+            System.out.println(pokemon.getPokemonInfo("type"));
+            System.out.println(pokemon.getPokemonInfo("lvl"));
+        }
+    }
 }
