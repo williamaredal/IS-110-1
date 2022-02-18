@@ -6,11 +6,6 @@
  * @version 1
  */
 
- /**
- * Hva denne klassen trenger:
- * - felt med informasjonen som beskriver kortet
- * - en metode for å vise informasjon fra feltene til kortet
- */
 public class DualMastersCard
 {
     private String cardName;

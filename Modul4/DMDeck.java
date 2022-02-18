@@ -7,19 +7,6 @@ import java.util.ArrayList;
  * @version 1
  */
 
-/**
- * Læremål:
- * 1. skrive metode som setter inn, finner og fjerner
- * 2. bruke for each løkke
- * 3. bruke while løkke
- * 
- * Hva denne klassen trenger:
- * - en liste for objektene
- * - en metode for å legge til DualMastersCard objekter i listen
- * - en metode for å finne DualMastersCard i listen
- * - en metode for å fjerne DualMastersCard fra listen
- */
-
 public class DMDeck
 {
     private ArrayList<DualMastersCard> myDeck;
