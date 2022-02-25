@@ -18,7 +18,7 @@ public class ParkingLot
     public ParkingLot(int capacity)
     {
         parkingLot = new Car[capacity];
-        parkingTickets = new ArrayList<Ticket>();
+
     }
 
 
@@ -41,6 +41,16 @@ public class ParkingLot
         }
 
     }
+
+    // method for checking car parking status
+    public void isCarParked(String plate) {
+        for (int i = 0; i <= parkingLot.length; i++) {
+            System.out.println((parkingLot[i].getParkedStatus() == true ) ? "Car is parked." : "Car is not parked.");
+        }
+    }
+
+    // method for hashmap
+
     
 
     // method for un-parking car from a lot
