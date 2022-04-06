@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,7 +24,6 @@ public class DualMastersTest {
     @Test
     public void FillDMDeckTest() {
         DMDeck deckUnderTesting = new DMDeck();
-        DualMastersCard cardUnderTesting = new DualMastersCard("Rothus, the Traveler", "Fire", 4000, 4);
 
         deckUnderTesting.addCard("Rothus, the Traveler", "Fire", 4000, 4);
 
