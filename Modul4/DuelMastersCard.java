@@ -1,6 +1,6 @@
 
 /**
- * A class for duel masters cards.
+ * A class for dual masters cards.
  *
  * @author William
  * @version 1
@@ -14,7 +14,7 @@ public class DuelMastersCard
     private int cardManaCost;
 
     /**
-     * Constructor for objects of class DuelMastersCard
+     * Constructor for objects of class DualMastersCard
      */
     public DuelMastersCard(String name, String type, int power, int manaCost)
     {
