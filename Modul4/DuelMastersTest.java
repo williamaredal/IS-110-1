@@ -3,11 +3,11 @@ import org.junit.Test;
 
 
 
-public class DualMastersTest {
+public class DuelMastersTest {
 
     @Test
     public void DualMastersCardCreationTest() {
-        DualMastersCard cardUnderTesting = new DualMastersCard("Rothus, the Traveler", "Fire", 4000, 4);
+        DuelMastersCard cardUnderTesting = new DuelMastersCard("Rothus, the Traveler", "Fire", 4000, 4);
         
         Assert.assertNotNull(cardUnderTesting);
     }
