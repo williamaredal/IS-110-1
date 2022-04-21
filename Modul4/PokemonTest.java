@@ -41,7 +41,7 @@ public class PokemonTest
     }
 
     @Test
-    public void CreatePokemon()
+    public void MethodReturnsCorrectType()
     {
         Pokemon pokemon1 = new Pokemon("Squirtle", "Water", 1);
         assertEquals("Squirtle", pokemon1.getPokemonInfo("name"));
