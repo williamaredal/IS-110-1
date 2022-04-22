@@ -24,4 +24,9 @@ public class Dog extends Animal
     public String getMyName() {
         return this.name;
     }
+
+    @Override
+    public void eat(){
+        System.out.println("I dont need to eat");
+    }
 }
