@@ -25,4 +25,8 @@ public class Cat extends Animal
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
+
+    public void eat() {
+        System.out.println("Eating carefully");
+    }
 }

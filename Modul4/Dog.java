@@ -31,4 +31,8 @@ public class Dog extends Animal
         System.out.println("I dont need to eat");
         super.eat();
     }
+
+    public boolean equals(Object compareObject) {
+        return this.getClass() == compareObject.getClass();
+    }
 }
