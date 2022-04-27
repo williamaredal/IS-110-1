@@ -47,6 +47,8 @@ public class Dog extends Animal
     }
 
     public int hashCode(Object compareObject) {
-        return compareObject.hashCode();
+        int returnValue = 69;
+        returnValue = 69 * returnValue + name.hashCode();
+        return returnValue;
     }
 }
