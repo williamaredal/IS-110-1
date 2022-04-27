@@ -14,7 +14,9 @@ public class Dog extends Animal
      */
     public Dog(String name)
     {
+        super(true);
         this.name = name;
+        
     }
 
     public void bark() {
@@ -25,7 +27,6 @@ public class Dog extends Animal
         return this.name;
     }
 
-    @Override
     public void eat(){
         System.out.println("I dont need to eat");
     }

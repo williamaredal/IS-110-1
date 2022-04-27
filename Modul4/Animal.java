@@ -7,13 +7,16 @@
 public class Animal
 {
     private boolean isHungry;
+    private boolean isThirsty;
 
     /**
      * Constructor for objects of class Animal
      */
-    public Animal()
+    public Animal(boolean isThirsty)
     {
         this.isHungry = false;
+        this.isThirsty = isThirsty;
+        System.out.println("Im hungry and thirsty");
     }
 
     public void eatIfHungry(){

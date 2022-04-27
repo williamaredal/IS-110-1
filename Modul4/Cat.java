@@ -16,6 +16,7 @@ public class Cat extends Animal
      */
     public Cat(String name, int age)
     {
+        super(true);
         this.name = name;
         this.age = age;
 
