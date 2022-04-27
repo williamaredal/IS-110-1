@@ -35,4 +35,8 @@ public class Dog extends Animal
     public boolean equals(Object compareObject) {
         return this.getClass() == compareObject.getClass();
     }
+
+    public int hashCode(Object compareObject) {
+        return compareObject.hashCode();
+    }
 }

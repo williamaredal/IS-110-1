@@ -26,6 +26,10 @@ public class Dyrepark
         park.add(pluto);
         park.add(wiskers);
 
+        System.out.println(pluto.hashCode());
+        System.out.println(pluto2.hashCode());
+        System.out.println(pluto3.hashCode());
+
         if (pluto.equals(pluto2)) {
             System.out.println("Similar ==");
         } else {
