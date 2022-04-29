@@ -23,4 +23,8 @@ public class Moose extends Animal implements Herbivore
     public void defend(String attacker) {
         System.out.println("Defended against " + attacker);
     }
+
+    public String getTerritory() {
+        return this.territory;
+    }
 }
