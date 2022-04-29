@@ -1,6 +1,10 @@
 import java.util.HashMap;
 import java.util.Random;
+
+import javax.management.openmbean.KeyAlreadyExistsException;
+
 import java.lang.String;
+import java.security.KeyException;
 
 /**
  * A class for storing random info in a hashmap.
@@ -11,6 +15,8 @@ import java.lang.String;
 public class HashStorage
 {
     private HashMap<String, String> myHashMap;
+    private String key1;
+    private String key2;
     
 
     /**
@@ -19,6 +25,11 @@ public class HashStorage
     public HashStorage()
     {
         myHashMap = new HashMap<>();
+        this.key1 = "Watt";
+        this.key2 = "Kilo";
+        this.myHashMap.put(key1, "22");
+        this.myHashMap.put(key2, "42");
+        
     }
 
     /**
@@ -27,16 +38,37 @@ public class HashStorage
      * @param String nameToAdd, this is the name you want to be the key in the hashmap
      */
     public void addHashPair(String nameToAdd) {
-        Random newRandom = new Random();
-        String newRandomString = newRandom.toString();
 
-        myHashMap.put(nameToAdd, newRandomString);
-        System.out.println(myHashMap);
-        System.out.println("Added " + nameToAdd + " to the hashMmap");
+        // defensive programming that prevents user input of parameter that will cause problems
+        try {
+            if (nameToAdd == null) {
+                throw new KeyException("This key is not allowed");
+            }
+            if (myHashMap.containsKey(nameToAdd)) {
+                throw new KeyAlreadyExistsException("This key already exists");
+            } else {
+                Random newRandom = new Random();
+                String newRandomString = "" + newRandom.nextInt(100);
+                myHashMap.put(nameToAdd, newRandomString);
+                System.out.println("Added " + nameToAdd + " to the hashMmap");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("There was a problem addin this key");
+            System.out.println(e);
+
+        }
+
     }
 
     public void getHashPair(String nameToGet) {
-        System.out.println(myHashMap.get(nameToGet));
+        if (myHashMap.containsKey(nameToGet) && nameToGet != null) {
+            System.out.println(myHashMap.get(nameToGet));
+
+        } else {
+            System.out.println("Invalid key given, or not a key in hashmap");
+        }
+
     }
 
 }
