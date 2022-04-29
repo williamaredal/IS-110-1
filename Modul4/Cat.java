@@ -1,11 +1,10 @@
 
 /**
- * Write a description of class Cat here.
  *
  * @author William
  * @version 1
  */
-public class Cat extends Animal
+public class Cat extends Animal implements Carnivore
 {
     private String name;
     private int age;
@@ -28,5 +27,13 @@ public class Cat extends Animal
 
     public void eat() {
         System.out.println("Eating carefully");
+    }
+
+    public void ambush(String target) {
+        System.out.println("Ambushed " + target);
+    }
+
+    public void defend(String attacker) {
+        System.out.println("Defended against " + attacker);
     }
 }

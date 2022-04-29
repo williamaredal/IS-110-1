@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 /**
- * Write a description of class Dyrepark here.
  *
  * @author William
  * @version 1
