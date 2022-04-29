@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Dyrepark
 {
-    private ArrayList park;
+    private ArrayList<Animal> park;
 
     /**
      * Constructor for objects of class Dyrepark
