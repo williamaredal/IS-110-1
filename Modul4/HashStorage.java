@@ -54,7 +54,7 @@ public class HashStorage
             }
         }
         catch (Exception e) {
-            System.out.println("There was a problem addin this key");
+            System.out.println("There was a problem adding this key");
             System.out.println(e);
 
         }
@@ -64,7 +64,6 @@ public class HashStorage
     public void getHashPair(String nameToGet) {
         if (myHashMap.containsKey(nameToGet) && nameToGet != null) {
             System.out.println(myHashMap.get(nameToGet));
-
         } else {
             System.out.println("Invalid key given, or not a key in hashmap");
         }
