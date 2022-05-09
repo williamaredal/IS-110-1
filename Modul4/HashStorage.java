@@ -46,6 +46,9 @@ public class HashStorage
             }
             if (myHashMap.containsKey(nameToAdd)) {
                 throw new KeyAlreadyExistsException("This key already exists");
+            }
+            if (nameToAdd == "exception") {
+                throw new Exception("This string is not allowed");
             } else {
                 Random newRandom = new Random();
                 String newRandomString = "" + newRandom.nextInt(100);

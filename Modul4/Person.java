@@ -20,6 +20,6 @@ public abstract class Person
     }
 
 
-
+    // this method should do x.
     public abstract void act();
 }
